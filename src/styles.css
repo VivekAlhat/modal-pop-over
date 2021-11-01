@@ -1,0 +1,66 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  font-family: sans-serif;
+  display: grid;
+  place-items: center;
+}
+
+#modal {
+  box-shadow: 3px 3px 3px #808080;
+  padding: 3rem 2rem;
+  width: 30rem;
+  position: relative;
+  background-color: white;
+  z-index: 100;
+  animation: popup 300ms linear;
+}
+
+#close__modal {
+  padding: 3px 8px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: red;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.inactive,
+.hide {
+  display: none;
+}
+
+#show__modal {
+  outline: none;
+  border: 1px solid lightgray;
+  padding: 0.7rem;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  background-color: slateblue;
+  color: white;
+  cursor: pointer;
+  transition: background-color linear 300ms;
+}
+
+#show__modal:hover {
+  background-color: blueviolet;
+}
+
+@keyframes popup {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 10;
+  }
+}
